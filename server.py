@@ -21,7 +21,7 @@ if os.environ.get('COMMAND_READY_PREVIEW_MODE', '1') != '1':
 
 @app.middleware('http')
 async def preview_guard(request: Request, call_next):
-    if os.environ.get('COMMAND_READY_PREVIEW_MODE', '1') == '1' and request.url.path != '/':
+    if os.environ.get('COMMAND_READY_PREVIEW_MODE', '1') == '1' and request.url.path != '/' and not re.fullmatch(r'/lesson/[0-6]', request.url.path):
         return JSONResponse({'detail': 'Unavailable in public preview mode'}, status_code=404)
     return await call_next(request)
 
@@ -79,9 +79,9 @@ def index():
         return FileResponse(BASE/'static'/'index.html')
     from html import escape
     cards = ''.join(
-        '<article><span class="num">MODULE ' + str(i+1) + '</span><h3>' +
+        '<a href="/lesson/' + str(i) + '" class="module-link"><article><span class="num">MODULE ' + str(i+1) + '</span><h3>' +
         escape(m['title']) + '</h3><p>' + escape(m['intro']) +
-        '</p><small>' + escape(m.get('duration','')) + '</small></article>'
+        '</p><small>' + escape(m.get('duration','')) + '</small><p>Open lesson →</p></article></a>'
         for i,m in enumerate(COURSE['modules'])
     )
     page = '''<!doctype html><html lang="en"><head><meta charset="utf-8">
@@ -95,7 +95,7 @@ h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:18px 0 10px}
 header p{max-width:700px;color:#d6e4ef}main{max-width:1100px;margin:auto;padding:35px 20px}
 h2{font-size:25px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
 article{background:#15263a;border:1px solid #31485e;border-radius:12px;padding:22px}
-article h3{margin:8px 0}article p{color:#c4d2df;font-size:14px}.num{font-size:12px;color:#d5b67d;font-weight:800;letter-spacing:.08em}
+a.module-link{color:inherit;text-decoration:none}a.module-link:hover article{border-color:#c9a46a}article h3{margin:8px 0}article p{color:#c4d2df;font-size:14px}.num{font-size:12px;color:#d5b67d;font-weight:800;letter-spacing:.08em}
 small{color:#b9c8d8}.note{margin-top:30px;padding:16px;border-left:3px solid #c9a46a;background:#192a3b}
 footer{text-align:center;padding:28px;color:#93a9bc;font-size:13px}
 </style></head><body><header><mark>INDEPENDENT LAW ENFORCEMENT EDUCATION</mark>
@@ -105,12 +105,41 @@ footer{text-align:center;padding:28px;color:#93a9bc;font-size:13px}
 <main><h2>Texas Arrest, Search &amp; Seizure Refresher</h2>
 <p>Seven instructional modules • Practical scenarios • 40-question final assessment planned</p>
 <div class="grid">''' + cards + '''</div>
-<div class="note"><strong>Private-build preview:</strong> This page demonstrates the course catalog and brand only.
+<div class="note"><strong>Private-build preview:</strong> This public preview allows reading lessons and practicing scenarios.
 Accounts, exams, progress tracking, certificates and agency dashboards are intentionally disabled.
 Course content requires independent legal review before commercial release. No TCOLE credit is implied.</div>
 </main><footer>© Command Ready Training Academy • Independent training platform prototype</footer>
 </body></html>'''
     return HTMLResponse(page)
+@app.get('/lesson/{module_index}')
+def preview_lesson(module_index: int):
+    if os.environ.get('COMMAND_READY_PREVIEW_MODE', '1') != '1':
+        raise HTTPException(404, 'Unavailable')
+    if not 0 <= module_index < len(COURSE['modules']):
+        raise HTTPException(404, 'Lesson not found')
+    from html import escape
+    def e(x): return escape(str(x), quote=True)
+    m = COURSE['modules'][module_index]
+    blocks = []
+    for i, q in enumerate(m.get('scenarios', []), 1):
+        opts = ''.join('<li>' + e(a) + '</li>' for a in q.get('a', []))
+        c = q.get('c', -1)
+        correct = q.get('a', [])[c] if isinstance(c, int) and 0 <= c < len(q.get('a', [])) else 'Refer to instructor guidance'
+        blocks.append('<section class="card"><h3>Scenario ' + str(i) + '</h3><p>' + e(q.get('q', '')) + '</p><ol type="A">' + opts + '</ol><details><summary>Reveal answer and explanation</summary><p><strong>Suggested answer:</strong> ' + e(correct) + '</p><p>' + e(q.get('why', '')) + '</p></details></section>')
+    previous = '<a href="/lesson/' + str(module_index-1) + '">← Previous</a>' if module_index else ''
+    following = '<a href="/lesson/' + str(module_index+1) + '">Next →</a>' if module_index + 1 < len(COURSE['modules']) else ''
+    chapter14 = '<p><a href="https://statutes.capitol.texas.gov/Docs/CR/htm/CR.14.htm" target="_blank" rel="noopener noreferrer">Official Texas CCP Chapter 14 ↗</a></p>' if module_index == 1 else ''
+    css = 'body{margin:0;background:#0b1521;color:#edf3fa;font:16px/1.6 system-ui,Arial}header{background:#193b57;padding:28px 5%;border-bottom:3px solid #c9a46a}main{max-width:950px;margin:auto;padding:25px 20px 70px}.card{background:#15263a;border:1px solid #31485e;border-radius:12px;padding:22px;margin:15px 0}.callout{background:#1b344d;border-left:4px solid #c9a46a;padding:18px;margin:20px 0}a,summary{color:#e8c890;cursor:pointer}details{background:#21374d;padding:12px;border-radius:8px}nav{display:flex;justify-content:space-between;gap:20px;margin:25px 0}small{color:#b9c8d8}'
+    body = ('<header><a href="/">← All modules</a><h2>COMMAND READY TRAINING ACADEMY</h2><small>Knowledge. Judgment. Readiness.</small></header>'
+        + '<main><small>LESSON ' + str(module_index+1) + ' OF ' + str(len(COURSE['modules'])) + ' · ' + e(m.get('duration', '')) + '</small>'
+        + '<h1>' + e(m.get('title', '')) + '</h1><p>' + e(m.get('intro', '')) + '</p>'
+        + '<div class="callout"><strong>Case law:</strong> ' + e(m.get('case', '')) + '<p>' + e(m.get('caseText', '')) + '</p></div>'
+        + '<div class="callout"><strong>Patrol takeaway:</strong> ' + e(m.get('takeaway', '')) + '</div>' + chapter14
+        + '<h2>Decision-making scenarios</h2><p>Consider each scenario before revealing the suggested answer.</p>' + ''.join(blocks)
+        + '<nav>' + previous + '<a href="/">All modules</a>' + following + '</nav>'
+        + '<small>Public practice preview only. No progress or scores saved. Independent legal review required before commercial release. No TCOLE credit implied.</small></main>')
+    return HTMLResponse('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + e(m.get('title', 'Lesson')) + ' | Command Ready</title><style>' + css + '</style></head><body>' + body + '</body></html>')
+
 @app.post('/api/login')
 def login(body:Login,request:Request):
     # Pilot only: reverse-proxy rate limiting / lockout required before deployment.
