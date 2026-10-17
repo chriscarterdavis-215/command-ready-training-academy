@@ -197,3 +197,22 @@ if __name__=='__main__' and len(sys.argv)>=2 and sys.argv[1]=='bootstrap-admin':
     with db() as c:
         c.execute('INSERT INTO users(username,display_name,password_hash,role,must_change_password) VALUES(?,?,?,?,0)',(username,name,PH.hash(pw),'admin'))
     print('Administrator created. Do not share credentials.')
+
+
+def bootstrap_demo_admin():
+    username = os.environ.get("COMMAND_READY_ADMIN_USER", "").strip().lower()
+    password = os.environ.get("COMMAND_READY_ADMIN_PASSWORD", "")
+    if not username or not password:
+        return
+    if not username_ok(username) or not password_ok(password):
+        raise RuntimeError("Invalid administrator setup credentials")
+    with db() as c:
+        existing = c.execute("SELECT COUNT(*) FROM users").fetchone()[0]
+        if existing == 0:
+            c.execute(
+                "INSERT INTO users(username, display_name, password_hash, role, must_change_password) VALUES (?, ?, ?, 'admin', 1)",
+                (username, "Demo Administrator", PH.hash(password))
+            )
+            print("Initial demonstration administrator created")
+
+bootstrap_demo_admin()
