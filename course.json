@@ -1,0 +1,746 @@
+{
+  "modules": [
+    {
+      "title": "Encounter, Detention & Probable Cause",
+      "duration": "15 min",
+      "intro": "A consensual contact allows questions without compelled answers. A seizure requires legal justification. Reasonable suspicion permits a limited investigative detention; probable cause is a higher threshold and must be linked to the suspected offense.",
+      "case": "Terry v. Ohio, 392 U.S. 1 (1968)",
+      "caseText": "Repeated casing-like conduct supported a brief stop; an additional safety basis supported a limited frisk. A stop does not authorize an automatic search.",
+      "takeaway": "Articulate the exact facts known when the person was seized; distinguish the basis for the stop from the basis for a frisk.",
+      "scenarios": [
+        {
+          "q": "An officer politely asks a pedestrian for directions and does not block departure. The pedestrian walks away.",
+          "a": [
+            "Allow departure absent independent grounds",
+            "Detain for refusing to answer",
+            "Search for identification"
+          ],
+          "c": 0,
+          "why": "Refusal to participate in a consensual encounter alone does not establish reasonable suspicion."
+        },
+        {
+          "q": "A person matches a detailed recent robbery description near the scene and takes evasive action when officers arrive.",
+          "a": [
+            "Automatic custodial arrest",
+            "Briefly detain if the totality supports reasonable suspicion",
+            "Search the person's phone"
+          ],
+          "c": 1,
+          "why": "Evaluate particularized facts and duration; reasonable suspicion is not automatically probable cause."
+        },
+        {
+          "q": "During a justified stop, the person keeps reaching toward a concealed waistband despite warnings and the officer can articulate a weapon concern.",
+          "a": [
+            "Limited protective frisk for weapons if armed-and-dangerous suspicion exists",
+            "Search every container for evidence",
+            "Arrest solely for nervousness"
+          ],
+          "c": 0,
+          "why": "A protective frisk is safety-limited, not a general evidence search."
+        }
+      ]
+    },
+    {
+      "title": "Texas Warrantless Arrest Authority",
+      "duration": "20 min",
+      "intro": "First ask whether probable cause exists. Then identify the Texas law authorizing arrest without a warrant. CCP 14.01(b) covers offenses committed in the officer's presence or view. CCP 14.03 contains specific exceptions, including qualifying family violence, assault with danger of further injury, protective-order violations, and interference with an emergency telephone call. These are not blanket exceptions.",
+      "case": "Atwater v. City of Lago Vista, 532 U.S. 318 (2001)",
+      "caseText": "The Fourth Amendment permitted an arrest for a minor offense committed in the officer's presence, but state arrest authority and policy still require separate review.",
+      "takeaway": "State the factual basis for probable cause and the specific warrantless-arrest exception, or obtain a warrant.",
+      "scenarios": [
+        {
+          "q": "An officer develops probable cause for a reported misdemeanor criminal mischief from several weeks ago; no exception applies.",
+          "a": [
+            "Seek a warrant",
+            "Arrest because probable cause is always enough",
+            "Arrest because the suspect is cooperative"
+          ],
+          "c": 0,
+          "why": "For a past misdemeanor not witnessed and without an exception, probable cause alone does not authorize warrantless arrest."
+        },
+        {
+          "q": "An officer has probable cause that a suspect committed an offense involving family violence outside the officer's presence.",
+          "a": [
+            "Consider the family-violence warrantless-arrest exception and its conditions",
+            "Never arrest without witnessing it",
+            "Treat all domestic arguments as crimes"
+          ],
+          "c": 0,
+          "why": "CCP 14.03(a)(4) addresses an offense involving family violence; verify the offense, family-violence facts and applicable conditions."
+        },
+        {
+          "q": "An officer has probable cause for interference with an emergency telephone call during an emergency, not personally witnessed.",
+          "a": [
+            "Consider the specific emergency-call warrantless-arrest exception",
+            "Only arrest if a dispatcher witnessed it",
+            "No arrest authority ever exists"
+          ],
+          "c": 0,
+          "why": "CCP 14.03(a)(5) provides a specific exception; verify Penal Code 42.062 elements and current statutory text."
+        },
+        {
+          "q": "A reported assault caused bodily injury; there is also probable cause the suspect presents danger of further bodily injury to the victim.",
+          "a": [
+            "Consider the assault-and-further-danger exception",
+            "An assault report alone always permits arrest",
+            "Arrest only if officer witnessed the assault"
+          ],
+          "c": 0,
+          "why": "CCP 14.03(a)(2) requires both assault causing bodily injury and danger of further bodily injury."
+        },
+        {
+          "q": "An officer has probable cause of a qualifying protective-order violation outside the officer's presence.",
+          "a": [
+            "Consider the qualifying protective-order exception",
+            "All protective-order disputes mandate arrest",
+            "No warrantless exception exists"
+          ],
+          "c": 0,
+          "why": "CCP 14.03(a)(3) applies to qualifying Penal Code 25.07 violations; verify order and offense elements."
+        }
+      ]
+    },
+    {
+      "title": "Frisks, Consent & Searches of People",
+      "duration": "12 min",
+      "intro": "A Terry frisk requires reasonable suspicion the person is armed and dangerous and is limited to locating weapons. Consent must be voluntary and the search remain within its scope. An arrest does not justify an unlimited search of every nearby item.",
+      "case": "Minnesota v. Dickerson, 508 U.S. 366 (1993)",
+      "caseText": "During a lawful frisk, the plain-feel doctrine is narrow; manipulation of an object beyond the protective purpose is not authorized.",
+      "takeaway": "Explain the separate basis and permitted scope for each search.",
+      "scenarios": [
+        {
+          "q": "A lawful detention is underway, but the officer has no facts indicating weapons.",
+          "a": [
+            "Do not automatically frisk",
+            "Frisk everyone during every detention",
+            "Search pockets for contraband"
+          ],
+          "c": 0,
+          "why": "A detention alone does not authorize a frisk."
+        },
+        {
+          "q": "A person voluntarily consents to a search of a backpack but expressly excludes a zipped personal pouch.",
+          "a": [
+            "Respect the expressed limitation absent another lawful basis",
+            "Ignore the limitation",
+            "Treat consent as irrevocable permission for all property"
+          ],
+          "c": 0,
+          "why": "Consent searches are limited by objective scope and may be restricted or withdrawn."
+        },
+        {
+          "q": "During a lawful weapons frisk, an officer feels an object that is clearly not a weapon and squeezes it to determine if it is drugs.",
+          "a": [
+            "Stop manipulation unless another lawful basis exists",
+            "Manipulate freely to identify contraband",
+            "Automatically arrest"
+          ],
+          "c": 0,
+          "why": "Dickerson limits plain feel and prohibits exceeding the weapons frisk's lawful scope."
+        }
+      ]
+    },
+    {
+      "title": "Vehicles & Traffic Stops",
+      "duration": "15 min",
+      "intro": "A traffic stop is a seizure. Its duration must relate to the traffic mission and lawful safety tasks unless separate reasonable suspicion justifies prolongation. Vehicle searches require a valid exception: consent, probable cause under the automobile exception, a properly justified inventory, or a limited search incident to arrest under Gant.",
+      "case": "Rodriguez v. United States, 575 U.S. 348 (2015); Arizona v. Gant, 556 U.S. 332 (2009)",
+      "caseText": "Rodriguez restricts prolonging a traffic stop for unrelated investigation without separate reasonable suspicion. Gant restricts vehicle searches incident to arrest.",
+      "takeaway": "Name the search exception and identify the facts supporting it before opening a vehicle compartment.",
+      "scenarios": [
+        {
+          "q": "A traffic citation is complete; an officer extends the stop solely to await a dog without independent reasonable suspicion.",
+          "a": [
+            "Do not prolong the stop for that purpose",
+            "Extend indefinitely",
+            "Search automatically"
+          ],
+          "c": 0,
+          "why": "Rodriguez requires independent justification for an unrelated extension."
+        },
+        {
+          "q": "A driver is arrested for a license offense and secured in a patrol car; there is no reason to believe offense evidence is in the car.",
+          "a": [
+            "Do not automatically search incident to arrest",
+            "Search any compartment automatically",
+            "Search because an arrest occurred"
+          ],
+          "c": 0,
+          "why": "Gant's vehicle search-incident framework does not permit an automatic search on these facts."
+        },
+        {
+          "q": "An officer develops probable cause that a vehicle contains contraband and the automobile exception applies.",
+          "a": [
+            "Search areas where the object of the search may reasonably be found",
+            "Search only the driver's seat",
+            "Search the owner's home too"
+          ],
+          "c": 0,
+          "why": "The automobile exception has an object-and-location scope; it does not authorize a home search."
+        }
+      ]
+    },
+    {
+      "title": "Homes, Warrants & Exigency",
+      "duration": "15 min",
+      "intro": "Entry into a home ordinarily requires a warrant or a recognized exception. Consent requires authority and voluntariness; exigency must be supported by concrete facts. An arrest warrant for one person does not automatically authorize entering a third party's home.",
+      "case": "Payton v. New York, 445 U.S. 573 (1980); Steagald v. United States, 451 U.S. 204 (1981)",
+      "caseText": "Payton protects the home against routine warrantless entry to arrest. Steagald distinguishes an arrest warrant from authority to enter a third party's home.",
+      "takeaway": "Before crossing a threshold, identify the warrant or exception and the premises to which it applies.",
+      "scenarios": [
+        {
+          "q": "Officers have probable cause of a misdemeanor but no warrant, consent, or exigency; suspect is inside a residence.",
+          "a": [
+            "Seek judicial authorization rather than enter",
+            "Enter solely because probable cause exists",
+            "Treat the front door as public"
+          ],
+          "c": 0,
+          "why": "Home entry needs its own legal justification."
+        },
+        {
+          "q": "A person with apparent common authority voluntarily allows entry to shared living areas.",
+          "a": [
+            "Evaluate authority, voluntariness and scope",
+            "Assume consent covers all private locked spaces",
+            "Ignore an objecting physically present co-occupant"
+          ],
+          "c": 0,
+          "why": "Consent authority and scope are fact-specific; occupant objections can change the analysis."
+        },
+        {
+          "q": "Officers hold an arrest warrant for a suspect believed to be visiting someone else's residence.",
+          "a": [
+            "Assess need for a search warrant or valid exception to enter the third party's home",
+            "Use the arrest warrant as universal entry authority",
+            "Enter without checking location"
+          ],
+          "c": 0,
+          "why": "Steagald recognizes independent privacy interests of third-party occupants."
+        }
+      ]
+    },
+    {
+      "title": "Search Incident, Inventory & Evidence",
+      "duration": "12 min",
+      "intro": "Search incident to lawful custodial arrest has boundaries tied to the arrestee and the circumstances. Inventory is an administrative caretaking process performed under standardized policy, not a pretext for an investigative rummage. Plain view requires lawful vantage and lawful access.",
+      "case": "Chimel v. California, 395 U.S. 752 (1969); South Dakota v. Opperman, 428 U.S. 364 (1976)",
+      "caseText": "Chimel limits a search incident to arrest to the person and immediately accessible area. Opperman recognizes standardized vehicle inventories under appropriate circumstances.",
+      "takeaway": "Document the actual exception, standardized procedures when applicable, and the search scope.",
+      "scenarios": [
+        {
+          "q": "A vehicle is lawfully impounded; department policy specifies an inventory procedure.",
+          "a": [
+            "Follow the standardized inventory procedure for caretaking purposes",
+            "Invent a broader procedure at the scene",
+            "Call every investigative search an inventory"
+          ],
+          "c": 0,
+          "why": "Inventory must be tied to lawful custody and standardized procedures."
+        },
+        {
+          "q": "An officer lawfully observes contraband through an open doorway but has no lawful right to enter the home.",
+          "a": [
+            "Obtain lawful access before seizing it",
+            "Enter because visibility alone authorizes entry",
+            "Ignore the entry issue"
+          ],
+          "c": 0,
+          "why": "Plain view does not eliminate the need for lawful access."
+        },
+        {
+          "q": "After an arrest, an officer wants to search an unrelated locked room far from the secured arrestee.",
+          "a": [
+            "Identify a separate lawful search basis",
+            "Search it automatically incident to arrest",
+            "Assume arrest makes the entire building searchable"
+          ],
+          "c": 0,
+          "why": "Chimel does not authorize searching remote areas merely because an arrest occurred."
+        }
+      ]
+    },
+    {
+      "title": "Miranda, Custody & Questioning",
+      "duration": "12 min",
+      "intro": "Miranda warnings are generally required before custodial interrogation, not for every encounter or arrest. Custody and interrogation are distinct inquiries. Volunteered statements are not necessarily the product of interrogation; invocation and waiver rules must be followed.",
+      "case": "Miranda v. Arizona, 384 U.S. 436 (1966); Berkemer v. McCarty, 468 U.S. 420 (1984)",
+      "caseText": "Miranda addresses custodial interrogation. Berkemer explains that ordinary roadside traffic questioning is generally not automatically Miranda custody.",
+      "takeaway": "Ask separately: Is the person in custody for Miranda purposes? Is the officer interrogating?",
+      "scenarios": [
+        {
+          "q": "During an ordinary traffic stop, an officer asks routine questions without arrest-like restraints.",
+          "a": [
+            "Analyze custody; Miranda is not automatically required solely because of a stop",
+            "Miranda is always required before any question",
+            "Every traffic stop is custodial interrogation"
+          ],
+          "c": 0,
+          "why": "Berkemer distinguishes typical roadside detention from Miranda custody."
+        },
+        {
+          "q": "A handcuffed arrestee in an interview room is asked questions reasonably likely to elicit an incriminating response.",
+          "a": [
+            "Provide Miranda warnings and obtain a valid waiver before custodial interrogation",
+            "No warnings needed because handcuffs are common",
+            "A report form substitutes for warnings"
+          ],
+          "c": 0,
+          "why": "Custody plus interrogation triggers Miranda protections absent an applicable exception."
+        },
+        {
+          "q": "A person spontaneously blurts out an incriminating statement without prompting.",
+          "a": [
+            "Document the voluntary statement and circumstances",
+            "Assume it is always inadmissible",
+            "Treat every spontaneous statement as an interrogation response"
+          ],
+          "c": 0,
+          "why": "Miranda generally addresses statements produced by custodial interrogation."
+        }
+      ]
+    }
+  ],
+  "bank": [
+    {
+      "q": "An officer politely asks a pedestrian for directions and does not block departure. The pedestrian walks away.",
+      "a": [
+        "Search for identification",
+        "Allow departure absent independent grounds",
+        "Detain for refusing to answer"
+      ],
+      "c": 1,
+      "why": "Refusal to participate in a consensual encounter alone does not establish reasonable suspicion.",
+      "module": 0
+    },
+    {
+      "q": "A person matches a detailed recent robbery description near the scene and takes evasive action when officers arrive.",
+      "a": [
+        "Briefly detain if the totality supports reasonable suspicion",
+        "Search the person's phone",
+        "Automatic custodial arrest"
+      ],
+      "c": 0,
+      "why": "Evaluate particularized facts and duration; reasonable suspicion is not automatically probable cause.",
+      "module": 0
+    },
+    {
+      "q": "During a justified stop, the person keeps reaching toward a concealed waistband despite warnings and the officer can articulate a weapon concern.",
+      "a": [
+        "Limited protective frisk for weapons if armed-and-dangerous suspicion exists",
+        "Search every container for evidence",
+        "Arrest solely for nervousness"
+      ],
+      "c": 0,
+      "why": "A protective frisk is safety-limited, not a general evidence search.",
+      "module": 0
+    },
+    {
+      "q": "An officer develops probable cause for a reported misdemeanor criminal mischief from several weeks ago; no exception applies.",
+      "a": [
+        "Arrest because the suspect is cooperative",
+        "Seek a warrant",
+        "Arrest because probable cause is always enough"
+      ],
+      "c": 1,
+      "why": "For a past misdemeanor not witnessed and without an exception, probable cause alone does not authorize warrantless arrest.",
+      "module": 1
+    },
+    {
+      "q": "An officer has probable cause that a suspect committed an offense involving family violence outside the officer's presence.",
+      "a": [
+        "Never arrest without witnessing it",
+        "Treat all domestic arguments as crimes",
+        "Consider the family-violence warrantless-arrest exception and its conditions"
+      ],
+      "c": 2,
+      "why": "CCP 14.03(a)(4) addresses an offense involving family violence; verify the offense, family-violence facts and applicable conditions.",
+      "module": 1
+    },
+    {
+      "q": "An officer has probable cause for interference with an emergency telephone call during an emergency, not personally witnessed.",
+      "a": [
+        "Consider the specific emergency-call warrantless-arrest exception",
+        "Only arrest if a dispatcher witnessed it",
+        "No arrest authority ever exists"
+      ],
+      "c": 0,
+      "why": "CCP 14.03(a)(5) provides a specific exception; verify Penal Code 42.062 elements and current statutory text.",
+      "module": 1
+    },
+    {
+      "q": "A reported assault caused bodily injury; there is also probable cause the suspect presents danger of further bodily injury to the victim.",
+      "a": [
+        "Arrest only if officer witnessed the assault",
+        "Consider the assault-and-further-danger exception",
+        "An assault report alone always permits arrest"
+      ],
+      "c": 1,
+      "why": "CCP 14.03(a)(2) requires both assault causing bodily injury and danger of further bodily injury.",
+      "module": 1
+    },
+    {
+      "q": "An officer has probable cause of a qualifying protective-order violation outside the officer's presence.",
+      "a": [
+        "All protective-order disputes mandate arrest",
+        "No warrantless exception exists",
+        "Consider the qualifying protective-order exception"
+      ],
+      "c": 2,
+      "why": "CCP 14.03(a)(3) applies to qualifying Penal Code 25.07 violations; verify order and offense elements.",
+      "module": 1
+    },
+    {
+      "q": "A lawful detention is underway, but the officer has no facts indicating weapons.",
+      "a": [
+        "Do not automatically frisk",
+        "Frisk everyone during every detention",
+        "Search pockets for contraband"
+      ],
+      "c": 0,
+      "why": "A detention alone does not authorize a frisk.",
+      "module": 2
+    },
+    {
+      "q": "A person voluntarily consents to a search of a backpack but expressly excludes a zipped personal pouch.",
+      "a": [
+        "Treat consent as irrevocable permission for all property",
+        "Respect the expressed limitation absent another lawful basis",
+        "Ignore the limitation"
+      ],
+      "c": 1,
+      "why": "Consent searches are limited by objective scope and may be restricted or withdrawn.",
+      "module": 2
+    },
+    {
+      "q": "During a lawful weapons frisk, an officer feels an object that is clearly not a weapon and squeezes it to determine if it is drugs.",
+      "a": [
+        "Manipulate freely to identify contraband",
+        "Automatically arrest",
+        "Stop manipulation unless another lawful basis exists"
+      ],
+      "c": 2,
+      "why": "Dickerson limits plain feel and prohibits exceeding the weapons frisk's lawful scope.",
+      "module": 2
+    },
+    {
+      "q": "A traffic citation is complete; an officer extends the stop solely to await a dog without independent reasonable suspicion.",
+      "a": [
+        "Do not prolong the stop for that purpose",
+        "Extend indefinitely",
+        "Search automatically"
+      ],
+      "c": 0,
+      "why": "Rodriguez requires independent justification for an unrelated extension.",
+      "module": 3
+    },
+    {
+      "q": "A driver is arrested for a license offense and secured in a patrol car; there is no reason to believe offense evidence is in the car.",
+      "a": [
+        "Search because an arrest occurred",
+        "Do not automatically search incident to arrest",
+        "Search any compartment automatically"
+      ],
+      "c": 1,
+      "why": "Gant's vehicle search-incident framework does not permit an automatic search on these facts.",
+      "module": 3
+    },
+    {
+      "q": "An officer develops probable cause that a vehicle contains contraband and the automobile exception applies.",
+      "a": [
+        "Search only the driver's seat",
+        "Search the owner's home too",
+        "Search areas where the object of the search may reasonably be found"
+      ],
+      "c": 2,
+      "why": "The automobile exception has an object-and-location scope; it does not authorize a home search.",
+      "module": 3
+    },
+    {
+      "q": "Officers have probable cause of a misdemeanor but no warrant, consent, or exigency; suspect is inside a residence.",
+      "a": [
+        "Seek judicial authorization rather than enter",
+        "Enter solely because probable cause exists",
+        "Treat the front door as public"
+      ],
+      "c": 0,
+      "why": "Home entry needs its own legal justification.",
+      "module": 4
+    },
+    {
+      "q": "A person with apparent common authority voluntarily allows entry to shared living areas.",
+      "a": [
+        "Ignore an objecting physically present co-occupant",
+        "Evaluate authority, voluntariness and scope",
+        "Assume consent covers all private locked spaces"
+      ],
+      "c": 1,
+      "why": "Consent authority and scope are fact-specific; occupant objections can change the analysis.",
+      "module": 4
+    },
+    {
+      "q": "Officers hold an arrest warrant for a suspect believed to be visiting someone else's residence.",
+      "a": [
+        "Use the arrest warrant as universal entry authority",
+        "Enter without checking location",
+        "Assess need for a search warrant or valid exception to enter the third party's home"
+      ],
+      "c": 2,
+      "why": "Steagald recognizes independent privacy interests of third-party occupants.",
+      "module": 4
+    },
+    {
+      "q": "A vehicle is lawfully impounded; department policy specifies an inventory procedure.",
+      "a": [
+        "Follow the standardized inventory procedure for caretaking purposes",
+        "Invent a broader procedure at the scene",
+        "Call every investigative search an inventory"
+      ],
+      "c": 0,
+      "why": "Inventory must be tied to lawful custody and standardized procedures.",
+      "module": 5
+    },
+    {
+      "q": "An officer lawfully observes contraband through an open doorway but has no lawful right to enter the home.",
+      "a": [
+        "Ignore the entry issue",
+        "Obtain lawful access before seizing it",
+        "Enter because visibility alone authorizes entry"
+      ],
+      "c": 1,
+      "why": "Plain view does not eliminate the need for lawful access.",
+      "module": 5
+    },
+    {
+      "q": "After an arrest, an officer wants to search an unrelated locked room far from the secured arrestee.",
+      "a": [
+        "Search it automatically incident to arrest",
+        "Assume arrest makes the entire building searchable",
+        "Identify a separate lawful search basis"
+      ],
+      "c": 2,
+      "why": "Chimel does not authorize searching remote areas merely because an arrest occurred.",
+      "module": 5
+    },
+    {
+      "q": "During an ordinary traffic stop, an officer asks routine questions without arrest-like restraints.",
+      "a": [
+        "Analyze custody; Miranda is not automatically required solely because of a stop",
+        "Miranda is always required before any question",
+        "Every traffic stop is custodial interrogation"
+      ],
+      "c": 0,
+      "why": "Berkemer distinguishes typical roadside detention from Miranda custody.",
+      "module": 6
+    },
+    {
+      "q": "A handcuffed arrestee in an interview room is asked questions reasonably likely to elicit an incriminating response.",
+      "a": [
+        "A report form substitutes for warnings",
+        "Provide Miranda warnings and obtain a valid waiver before custodial interrogation",
+        "No warnings needed because handcuffs are common"
+      ],
+      "c": 1,
+      "why": "Custody plus interrogation triggers Miranda protections absent an applicable exception.",
+      "module": 6
+    },
+    {
+      "q": "A person spontaneously blurts out an incriminating statement without prompting.",
+      "a": [
+        "Assume it is always inadmissible",
+        "Treat every spontaneous statement as an interrogation response",
+        "Document the voluntary statement and circumstances"
+      ],
+      "c": 2,
+      "why": "Miranda generally addresses statements produced by custodial interrogation.",
+      "module": 6
+    },
+    {
+      "q": "Which fact best supports a detention?",
+      "a": [
+        "Specific conduct linked to a suspected offense",
+        "A vague feeling",
+        "Refusal to chat alone"
+      ],
+      "c": 0,
+      "why": "Reasonable suspicion requires particularized objective facts.",
+      "module": -1
+    },
+    {
+      "q": "Probable cause to arrest and authority for a warrantless arrest are:",
+      "a": [
+        "Irrelevant for misdemeanors",
+        "Separate legal questions",
+        "Always identical"
+      ],
+      "c": 1,
+      "why": "Texas statutory restrictions may apply independently.",
+      "module": -1
+    },
+    {
+      "q": "What does a person's refusal of a voluntary request generally establish by itself?",
+      "a": [
+        "Probable cause",
+        "A frisk basis",
+        "No automatic reasonable suspicion"
+      ],
+      "c": 2,
+      "why": "Refusal alone ordinarily does not justify seizure.",
+      "module": -1
+    },
+    {
+      "q": "When is a frisk justified during a lawful stop?",
+      "a": [
+        "Reasonable suspicion the person is armed and dangerous",
+        "Every time a stop is lawful",
+        "Only after a warrant"
+      ],
+      "c": 0,
+      "why": "Terry's frisk threshold is distinct.",
+      "module": -1
+    },
+    {
+      "q": "What is the proper purpose of a Terry frisk?",
+      "a": [
+        "Inventorying belongings",
+        "Officer safety by locating weapons",
+        "A general search for evidence"
+      ],
+      "c": 1,
+      "why": "Protective frisks are limited.",
+      "module": -1
+    },
+    {
+      "q": "Which is a key condition of valid consent?",
+      "a": [
+        "Written signature in every case",
+        "Probable cause",
+        "Voluntariness"
+      ],
+      "c": 2,
+      "why": "Voluntariness is assessed under the circumstances.",
+      "module": -1
+    },
+    {
+      "q": "If a person limits the scope of consent, an officer should:",
+      "a": [
+        "Honor the limitation absent another exception",
+        "Ignore it",
+        "Treat consent as permanent"
+      ],
+      "c": 0,
+      "why": "Scope matters.",
+      "module": -1
+    },
+    {
+      "q": "When reviewing a delayed misdemeanor arrest, officers should:",
+      "a": [
+        "Assume every report counts as presence",
+        "Identify a Chapter 14 exception or obtain a warrant",
+        "Rely on probable cause alone"
+      ],
+      "c": 1,
+      "why": "Probable cause alone is insufficient for every warrantless misdemeanor arrest.",
+      "module": -1
+    },
+    {
+      "q": "For the assault-bodily-injury warrantless exception, what extra factor matters?",
+      "a": [
+        "The officer's preferred booking time",
+        "A signed confession",
+        "Probable cause of danger of further bodily injury"
+      ],
+      "c": 2,
+      "why": "CCP 14.03(a)(2) contains a further-danger condition.",
+      "module": -1
+    },
+    {
+      "q": "Which offense has a specifically identified warrantless-arrest exception in CCP 14.03?",
+      "a": [
+        "Interference with an emergency telephone call",
+        "Every property misdemeanor",
+        "Any municipal code violation"
+      ],
+      "c": 0,
+      "why": "The statutory exception is specific and requires the offense elements.",
+      "module": -1
+    },
+    {
+      "q": "Does an arrest warrant always authorize entry into a third party's residence?",
+      "a": [
+        "Only if officers are in uniform",
+        "No, separate entry authority may be needed",
+        "Yes, in every circumstance"
+      ],
+      "c": 1,
+      "why": "Steagald protects third-party premises.",
+      "module": -1
+    },
+    {
+      "q": "An inventory search should be:",
+      "a": [
+        "A substitute for missing probable cause",
+        "Unlimited whenever a tow truck arrives",
+        "Consistent with standardized policy and lawful custody"
+      ],
+      "c": 2,
+      "why": "Inventory is administrative, not an evidence-search workaround.",
+      "module": -1
+    },
+    {
+      "q": "Under Gant, a vehicle search incident to arrest is:",
+      "a": [
+        "Limited by specific conditions",
+        "Automatic whenever a driver is arrested",
+        "Always allowed after the vehicle is towed"
+      ],
+      "c": 0,
+      "why": "Gant limits this doctrine.",
+      "module": -1
+    },
+    {
+      "q": "What is needed to extend a completed traffic stop for an unrelated investigation?",
+      "a": [
+        "An arrest warrant for the driver",
+        "Independent legal justification",
+        "Only officer curiosity"
+      ],
+      "c": 1,
+      "why": "Rodriguez addresses unrelated prolongation.",
+      "module": -1
+    },
+    {
+      "q": "Miranda generally becomes relevant when:",
+      "a": [
+        "An officer asks any question",
+        "An officer starts a traffic stop",
+        "Custody and interrogation are both present"
+      ],
+      "c": 2,
+      "why": "Both custody and interrogation must be assessed.",
+      "module": -1
+    },
+    {
+      "q": "Plain view alone:",
+      "a": [
+        "Does not eliminate the need for lawful access",
+        "Always permits forced entry",
+        "Authorizes a full house search"
+      ],
+      "c": 0,
+      "why": "Observation and physical access are separate questions.",
+      "module": -1
+    },
+    {
+      "q": "A useful arrest report should identify:",
+      "a": [
+        "Facts discovered days afterward as if known earlier",
+        "Facts known at the time and the specific authority relied upon",
+        "Only the ultimate charge"
+      ],
+      "c": 1,
+      "why": "Chronology and contemporaneous facts matter.",
+      "module": -1
+    }
+  ]
+}
